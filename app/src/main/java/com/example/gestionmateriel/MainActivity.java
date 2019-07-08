@@ -10,8 +10,6 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.example.gestionmateriel.ui.main.SectionsPagerAdapter;
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent i = new Intent(MainActivity.this, AjoutClient.class);
+                Intent i = new Intent(MainActivity.this, AjoutClientActivity.class);
                 startActivity(i);
             }
         });

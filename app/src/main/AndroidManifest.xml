@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AjoutClient"
+            android:name=".AjoutClientActivity"
             android:label="@string/title_activity_ajout_client"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

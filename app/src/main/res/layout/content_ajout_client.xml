@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".AjoutClient"
+    tools:context=".AjoutClientActivity"
     tools:showIn="@layout/activity_ajout_client">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
