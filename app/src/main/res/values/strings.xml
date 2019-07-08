@@ -3,4 +3,5 @@
     <string name="tab_text_1">Infos</string>
     <string name="tab_text_2">Contacts</string>
     <string name="tab_text_3">Matériels</string>
+    <string name="title_activity_ajout_client">AjoutClient</string>
 </resources>
