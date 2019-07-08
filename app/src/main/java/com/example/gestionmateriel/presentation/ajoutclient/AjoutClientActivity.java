@@ -1,7 +1,8 @@
-package com.example.gestionmateriel;
+package com.example.gestionmateriel.presentation.ajoutclient;
 
 import android.os.Bundle;
 
+import com.example.gestionmateriel.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 

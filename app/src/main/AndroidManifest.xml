@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AjoutClientActivity"
+            android:name=".presentation.ajoutclient.AjoutClientActivity"
             android:label="@string/title_activity_ajout_client"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".presentation.detailclient.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gestionmateriel.MainActivity" />
+                android:value="com.example.gestionmateriel.presentation.detailclient.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.detailclient.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

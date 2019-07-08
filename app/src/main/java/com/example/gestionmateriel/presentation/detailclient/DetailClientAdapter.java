@@ -1,4 +1,4 @@
-package com.example.gestionmateriel.ui.main;
+package com.example.gestionmateriel.presentation.detailclient;
 
 import android.content.Context;
 
@@ -9,27 +9,37 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.gestionmateriel.R;
+import com.example.gestionmateriel.presentation.detailclient.ContactsFragment;
+import com.example.gestionmateriel.presentation.detailclient.InfosClientFragment;
+import com.example.gestionmateriel.presentation.detailclient.MaterielsClientsFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class DetailClientAdapter extends FragmentPagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public DetailClientAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        switch (position) {
+            case 0:
+                return new InfosClientFragment();
+            case 1:
+                return new ContactsFragment();
+            case 2:
+                return new MaterielsClientsFragment();
+            default:
+                return new InfosClientFragment();
+        }
     }
 
     @Nullable
