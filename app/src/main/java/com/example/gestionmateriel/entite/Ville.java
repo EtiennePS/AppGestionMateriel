@@ -28,4 +28,8 @@ public class Ville {
     public void setVille(String ville) {
         this.ville = ville;
     }
+
+    public String toString() {
+        return getVille() + " " + getCodePostale();
+    }
 }
