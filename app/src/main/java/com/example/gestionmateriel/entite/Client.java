@@ -5,7 +5,7 @@ public class Client {
     private String nom;
     private String adresse1;
     private String adresse2;
-    private Ville ville;
+    private Ville idcpville;
 
     public int getId() {
         return id;
@@ -40,10 +40,10 @@ public class Client {
     }
 
     public Ville getVille() {
-        return ville;
+        return idcpville;
     }
 
     public void setVille(Ville ville) {
-        this.ville = ville;
+        this.idcpville = ville;
     }
 }
