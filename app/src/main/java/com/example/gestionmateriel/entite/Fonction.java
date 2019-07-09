@@ -1,7 +1,13 @@
 package com.example.gestionmateriel.entite;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Fonction {
+
+    @JsonProperty("fct_id")
     private int id;
+
+    @JsonProperty("fct_libelle")
     private String libelle;
 
     public int getId() {

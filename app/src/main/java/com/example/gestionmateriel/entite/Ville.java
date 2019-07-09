@@ -1,9 +1,18 @@
 package com.example.gestionmateriel.entite;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Ville {
+
+    @JsonProperty("ville_id")
     private int id;
+
+    @JsonProperty("ville_cp")
     private String codePostale;
-    private String ville;
+
+    @JsonProperty("ville_nom")
+    private String nom;
+
 
     public int getId() {
         return id;
@@ -21,15 +30,15 @@ public class Ville {
         this.codePostale = codePostale;
     }
 
-    public String getVille() {
-        return ville;
+    public String getNom() {
+        return nom;
     }
 
-    public void setVille(String ville) {
-        this.ville = ville;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public String toString() {
-        return getVille() + " " + getCodePostale();
+        return getNom() + " " + getCodePostale();
     }
 }

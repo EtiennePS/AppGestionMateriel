@@ -1,4 +1,4 @@
-package com.example.gestionmateriel.service;
+package com.example.gestionmateriel.repository;
 
 import com.example.gestionmateriel.entite.Ville;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -12,15 +12,15 @@ import java.util.List;
 
 public class VilleRepository {
 
-    /*public List<Ville> getAll() throws IOException {
+    public List<Ville> getAll() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
         // Read JSON file and convert to java object
-        InputStream fileInputStream = null;
+        InputStream fileInputStream = new FileInputStream("clients_contacts.json");
         List<Ville> villes = mapper.readValue(fileInputStream, new TypeReference<List<Ville>>(){});
         fileInputStream.close();
         return villes;
-    }*/
+    }
 
 
 
