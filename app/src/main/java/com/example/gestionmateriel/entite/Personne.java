@@ -1,11 +1,26 @@
 package com.example.gestionmateriel.entite;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Personne {
+
+    @JsonProperty("pers_id")
     private int id;
+
+    @JsonProperty("pers_nom")
     private String nom;
+
+    @JsonProperty("pers_prenom")
     private String prenom;
+
+    @JsonProperty("pers_tel")
     private String telephone;
+
+    @JsonProperty("pers_email")
     private String email;
+
+    @JsonProperty("fonction")
+    private Fonction fonction;
 
     public int getId() {
         return id;
@@ -45,5 +60,13 @@ public class Personne {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Fonction getFonction() {
+        return fonction;
+    }
+
+    public void setFonction(Fonction fonction) {
+        this.fonction = fonction;
     }
 }

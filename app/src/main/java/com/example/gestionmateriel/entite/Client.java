@@ -1,11 +1,32 @@
 package com.example.gestionmateriel.entite;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.List;
+
 public class Client {
+
+    @JsonProperty("clt_id")
     private int id;
+
+    @JsonProperty("clt_nom")
     private String nom;
+
+    @JsonProperty("clt_adr1")
     private String adresse1;
+
+    @JsonProperty("clt_adr2")
     private String adresse2;
-    private Ville idcpville;
+
+    @JsonProperty("ville")
+    private Ville ville;
+
+    @JsonProperty("contacts")
+    private List<Personne> contacts;
+
+    public int getNbContact() {
+        return this.contacts.size();
+    }
 
     public int getId() {
         return id;
@@ -40,10 +61,18 @@ public class Client {
     }
 
     public Ville getVille() {
-        return idcpville;
+        return ville;
     }
 
     public void setVille(Ville ville) {
-        this.idcpville = ville;
+        this.ville = ville;
+    }
+
+    public List<Personne> getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(List<Personne> contacts) {
+        this.contacts = contacts;
     }
 }
