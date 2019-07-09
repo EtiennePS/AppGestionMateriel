@@ -16,9 +16,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
+import com.example.gestionmateriel.presentation.ajoutclient.AjoutClientActivity;
 import com.example.gestionmateriel.presentation.detailclient.DetailClientActivity;
 import com.example.gestionmateriel.repository.ClientRepository;
 import com.example.gestionmateriel.service.RequestMaker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 import java.util.List;
@@ -31,6 +34,19 @@ public class ListClientActivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_client);
+        setTitle(R.string.title_activity_liste_client);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                Intent i = new Intent(ListClientActivity.this, AjoutClientActivity.class);
+                startActivity(i);
+            }
+        });
 
         update();
     }

@@ -23,8 +23,7 @@
         <activity
             android:name=".presentation.ajoutclient.AjoutClientActivity"
             android:label="@string/title_activity_ajout_client"
-            android:parentActivityName=".presentation.detailclient.DetailClientActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".presentation.listclient.ListClientActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gestionmateriel.presentation.detailclient.DetailClientActivity" />

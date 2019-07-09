@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">GestionMateriel</string>
+    <string name="title_activity_liste_client">Liste Clients</string>
+    <string name="title_activity_ajout_client">Ajout Client</string>
+
     <string name="tab_text_1">Infos</string>
     <string name="tab_text_2">Contacts</string>
     <string name="tab_text_3">Matériels</string>
-    <string name="title_activity_ajout_client">Ajout Client</string>
-    <string name="ajout_client">Ajout Client</string>
+    <string name="btn_ajout_client">Ajouter</string>
     <string name="nomClient">Nom</string>
     <string name="adresseClient">Adresse</string>
     <string name="adresse2Client">Adresse2</string>

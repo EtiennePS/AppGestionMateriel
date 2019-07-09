@@ -1,175 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerInParent="true"
-    android:orientation="vertical"
-    tools:context=".presentation.ajoutclient.AjoutClientActivity">
+    android:orientation="vertical">
 
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/nom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:autofillHints=".AUTOFILL_HINT_NAME"
+        android:hint="@string/nomClient" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?attr/colorPrimary"
-            android:textAlignment="center"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="@string/title_activity_ajout_client"
-            app:titleMargin="20dp"
-            app:titleMarginStart="130dp"
-            app:titleTextColor="#FFFFFF" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="614dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingTop="30dp">
-
-            <LinearLayout
-                android:layout_width="165dp"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/nomClient" />
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/adresseClient" />
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/adresse2Client" />
-
-                    <TextView
-                        android:id="@+id/textView18"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/codepostaleClient" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/villeClient" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="244dp"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/nom"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:autofillHints=".AUTOFILL_HINT_NAME" />
-
-                    <EditText
-                        android:id="@+id/adresse1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:ems="10"
-                        android:inputType="textPostalAddress"
-                        android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS" />
-
-                    <EditText
-                        android:id="@+id/adresse2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:ems="10"
-                        android:inputType="textPostalAddress"
-                        android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS" />
-                        
-
-                    <EditText
-                        android:id="@+id/codepost"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:autofillHints=".AUTOFILL_HINT_POSTAL_CODE" />
-
-                    <EditText
-                        android:id="@+id/ville"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:autofillHints=".AUTOFILL_HINT_VILLE" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/adresse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="bottom|end
-"
-        android:orientation="horizontal">
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"
+        android:hint="@string/adresseClient" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="266dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
+    <EditText
+        android:id="@+id/adresse2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"
+        android:hint="@string/adresse2Client" />
 
-    </LinearLayout>
+    <EditText
+        android:id="@+id/codepost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:autofillHints=".AUTOFILL_HINT_POSTAL_CODE"
+        android:hint="@string/codepostaleClient" />
 
+    <EditText
+        android:id="@+id/ville"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:autofillHints=".AUTOFILL_HINT_VILLE"
+        android:hint="@string/villeClient" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_ajout_client" />
 
 </LinearLayout>
