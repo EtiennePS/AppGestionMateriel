@@ -34,11 +34,11 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void testConversionJsonVille() throws IOException {
-        VilleRepository vr = new VilleRepository();
+       /* VilleRepository vr = new VilleRepository();
         List<Ville> villes = vr.getAll();
 
         for(Ville v : villes) {
             Log.i("TEST", v.toString());
-        }
+        }*/
     }
 }

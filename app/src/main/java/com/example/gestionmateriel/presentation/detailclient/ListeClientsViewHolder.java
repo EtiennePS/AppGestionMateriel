@@ -1,6 +1,5 @@
 package com.example.gestionmateriel.presentation.detailclient;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -10,8 +9,9 @@ import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
 
 public class ListeClientsViewHolder extends RecyclerView.ViewHolder {
-    private TextView textViewView;
-    private ImageView imageView;
+    private TextView textViewView2;
+    private TextView textViewView3;
+    private TextView textViewView4;
 
     //itemView est la vue correspondante à 1 cellule
     public ListeClientsViewHolder(View itemView) {
@@ -19,16 +19,17 @@ public class ListeClientsViewHolder extends RecyclerView.ViewHolder {
 
         //c'est ici que l'on fait nos findView
 
-        textViewView = (TextView) itemView.findViewById(R.id.text);
-        imageView = (ImageView) itemView.findViewById(R.id.image);
+        textViewView2 = (TextView) itemView.findViewById(R.id.nom);
+        textViewView3 = (TextView) itemView.findViewById(R.id.nbContact);
+        textViewView4 = (TextView) itemView.findViewById(R.id.nbMateriel);
     }
 
     //puis ajouter une fonction pour remplir la cellule en fonction d'un MyObject
     public void bind(Client client){
-        textViewView.setText(client.getId());
-        textViewView.setText(client.getNom());
-        textViewView.setText(client.getAdresse1());
-        textViewView.setText(client.getAdresse2());
+        textViewView2.setText(client.getNom());
+        textViewView3.setText("0");
+        textViewView4.setText("0");
+
 
     }
 }
