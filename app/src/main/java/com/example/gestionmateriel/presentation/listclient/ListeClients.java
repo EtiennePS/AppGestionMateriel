@@ -1,4 +1,4 @@
-package com.example.gestionmateriel.presentation.detailclient;
+package com.example.gestionmateriel.presentation.listclient;
 
 
 import android.os.Bundle;
