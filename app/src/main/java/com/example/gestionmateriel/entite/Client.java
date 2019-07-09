@@ -7,6 +7,12 @@ public class Client {
     private String adresse2;
     private Ville idcpville;
 
+    public Client(int id, String nom, String adresse1, String adresse2){
+        this.id = id  ;
+        this.nom = nom  ;
+        this.adresse1 = adresse1  ;
+        this.adresse2 = adresse2  ;
+    }
     public int getId() {
         return id;
     }
