@@ -12,7 +12,7 @@ import java.util.List;
 
 public class VilleRepository {
 
-    public List<Ville> getAll() throws IOException {
+    /*public List<Ville> getAll() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
         // Read JSON file and convert to java object
@@ -20,7 +20,7 @@ public class VilleRepository {
         List<Ville> villes = mapper.readValue(fileInputStream, new TypeReference<List<Ville>>(){});
         fileInputStream.close();
         return villes;
-    }
+    }*/
 
 
 
