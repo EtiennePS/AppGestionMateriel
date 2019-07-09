@@ -3,5 +3,12 @@
     <string name="tab_text_1">Infos</string>
     <string name="tab_text_2">Contacts</string>
     <string name="tab_text_3">Matériels</string>
-    <string name="title_activity_ajout_client">AjoutClient</string>
+    <string name="title_activity_ajout_client">Ajout Client</string>
+    <string name="ajout_client">Ajout Client</string>
+    <string name="nomClient">Nom</string>
+    <string name="adresseClient">Adresse</string>
+    <string name="adresse2Client">Adresse2</string>
+    <string name="codepostaleClient">Code Postale</string>
+    <string name="villeClient">Ville</string>
+
 </resources>
