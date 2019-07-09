@@ -16,7 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
-import com.example.gestionmateriel.presentation.detailclient.MainActivity;
+import com.example.gestionmateriel.presentation.detailclient.DetailClientActivity;
 import com.example.gestionmateriel.repository.ClientRepository;
 import com.example.gestionmateriel.service.RequestMaker;
 
@@ -41,12 +41,15 @@ public class ListClientActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * Enclenche la mise à jour des données de la liste
+     */
     private void update() {
 
         Response.Listener<String> rl = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                ClientRepository cr = new ClientRepository();
+                ClientRepository cr = ClientRepository.getInstance();
                 try {
                     updateList(cr.jsonToClients(response));
                 } catch (IOException e) {
@@ -79,9 +82,11 @@ public class ListClientActivity extends AppCompatActivity {
         private TextView tvNomClient;
         private TextView tvNbContactClient;
         private TextView tvNbMaterielClient;
+        private Client client;
+
         public View view;
         //itemView est la vue correspondante à 1 cellule
-        public ListeClientsViewHolder(View itemView) {
+        public ListeClientsViewHolder(final View itemView) {
             super(itemView);
 
             //c'est ici que l'on fait nos findView
@@ -93,7 +98,8 @@ public class ListClientActivity extends AppCompatActivity {
             view = itemView;
             view.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
-                    Intent myIntent = new Intent(ListClientActivity.this, MainActivity.class);
+                    Intent myIntent = new Intent(ListClientActivity.this, DetailClientActivity.class);
+                    myIntent.putExtra("idClient", client.getId());
                     startActivity(myIntent);
                 }
             });
@@ -104,6 +110,7 @@ public class ListClientActivity extends AppCompatActivity {
             tvNomClient.setText(client.getNom());
             tvNbContactClient.setText(client.getNbContact() + "");
             tvNbMaterielClient.setText("0");
+            this.client = client;
         }
     }
 
