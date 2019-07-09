@@ -36,6 +36,7 @@
                     android:textSize="18sp"
                     tools:text="Paris" />
 
+
                 <TextView
                     android:id="@+id/nbContact"
                     android:layout_width="50dp"
