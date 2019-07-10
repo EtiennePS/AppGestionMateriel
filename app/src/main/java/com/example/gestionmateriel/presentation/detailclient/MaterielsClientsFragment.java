@@ -15,7 +15,7 @@ public class MaterielsClientsFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.materiels_clients_layout, container, false);
+        View root = inflater.inflate(R.layout.fragment_materiels_clients_layout, container, false);
         return root;
     }
 }
