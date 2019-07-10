@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
 
+
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="2dp"
+    android:includeFontPadding="false"
     app:cardElevation="2dp">
 
     <!-- Les CardView possèdent des attributs supplémentaires dont
@@ -17,6 +19,7 @@
      -->
 
     <LinearLayout
+
         android:layout_width="389dp"
         android:layout_height="wrap_content"
         android:background="#f2f1ef"
@@ -27,66 +30,122 @@
          donc rajouter un LinearLayout -->
 
         <LinearLayout
+            android:includeFontPadding="false"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
             <TextView
+                android:includeFontPadding="false"
                 android:id="@+id/prenomContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
                 android:fontFamily="sans-serif"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textColor="#333"
                 android:textSize="18sp"
                 tools:text="Pablo" />
 
             <TextView
+
+                android:includeFontPadding="false"
                 android:id="@+id/nomContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
                 android:fontFamily="sans-serif"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textColor="#333"
                 android:textSize="18sp"
                 tools:text="Pablito" />
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/fonctionContact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:selectableItemBackground"
-            android:fontFamily="sans-serif"
-            android:padding="20dp"
-            android:textColor="#333"
-            android:textSize="18sp"
-            tools:text="Artisan" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/mailContact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:selectableItemBackground"
-            android:fontFamily="sans-serif"
-            android:padding="20dp"
-            android:textColor="#333"
-            android:textSize="18sp"
-            tools:text="Pablo.Colegio@paella.net" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_mapmode" />
 
-        <TextView
-            android:id="@+id/telContact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:selectableItemBackground"
-            android:fontFamily="sans-serif"
-            android:padding="20dp"
-            android:textColor="#333"
-            android:textSize="18sp"
-            tools:text="45789658" />
+            <TextView
+                android:id="@+id/fonctionContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false"
+                android:padding="10dp"
+                android:textColor="#333"
+                android:textSize="18sp"
+                tools:text="Artisan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_dialog_email" />
+
+            <TextView
+                android:id="@+id/mailContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false"
+                android:padding="10dp"
+                android:textColor="#333"
+                android:textSize="18sp"
+                tools:text="Pablo.Colegio@paella.net"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+            <TextView
+                android:id="@+id/telContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false"
+                android:padding="10dp"
+                android:textColor="#333"
+                android:textSize="18sp"
+                tools:text="45789658"
+                android:onClick="telC"/>/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

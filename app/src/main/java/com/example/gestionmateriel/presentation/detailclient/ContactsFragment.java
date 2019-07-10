@@ -1,5 +1,6 @@
 package com.example.gestionmateriel.presentation.detailclient;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +21,8 @@ import com.example.gestionmateriel.repository.ClientRepository;
 import java.util.List;
 
 public class ContactsFragment extends Fragment {
-
     private RecyclerView recyclerViewContact;
+
 
        @Override
     public View onCreateView(
@@ -39,9 +40,13 @@ public class ContactsFragment extends Fragment {
            recyclerViewContact = (RecyclerView) root.findViewById(R.id.recyclerViewContacts);
            recyclerViewContact.setLayoutManager(new LinearLayoutManager(activity));
            recyclerViewContact.setAdapter( new ListeContactsAdapter(c.getContacts()) {});
-        return root;
 
-    }
+
+           return root;
+
+
+       }
+
 
 
 
@@ -77,6 +82,28 @@ public class ContactsFragment extends Fragment {
             mailContact.setText(contact.getEmail());
             telContact.setText(contact.getTelephone());
             this.contact = contact;
+
+
+            mailContact.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_SEND);
+                    intent.setType("plain/text");
+                    intent.putExtra(Intent.EXTRA_EMAIL, new String[] { mailContact.getText().toString() });
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "GestionClient: ");
+                    startActivity(Intent.createChooser(intent, ""));
+                }
+            });
+            telContact.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                smsIntent.setType("vnd.android-dir/mms-sms");
+                smsIntent.putExtra("address", telContact.getText().toString());
+                startActivity(smsIntent);
+            }
+        });
+
+
         }
 
 
@@ -109,6 +136,7 @@ public class ContactsFragment extends Fragment {
 
 
     }
+
 
 }
 
