@@ -4,9 +4,72 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="101dp"
-        android:text="Button" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/societeinfoclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Société"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/adresseinfoclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Adresse Société"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/adresse2infoclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Adresse2 Socièté"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/codepostinfoclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Code Postale Société"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/villeinfoclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Ville Société"
+            android:textSize="18sp" />
+
+        <Button
+
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#008577"
+            android:gravity="center"
+            android:text="Modifier"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    </LinearLayout>
+
 </LinearLayout>
