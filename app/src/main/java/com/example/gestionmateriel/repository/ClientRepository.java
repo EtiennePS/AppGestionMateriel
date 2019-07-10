@@ -112,6 +112,15 @@ public class ClientRepository {
         co3.setTelephone("0613903883");
         co3.setFonction(f3);
 
+        Fonction f4 = new Fonction();
+        f3.setLibelle("Expert tout court");
+        Contact co4 = new Contact();
+        co3.setNom("Pablo");
+        co3.setPrenom("Pablito");
+        co3.setEmail("Pablo.pablito@gmail.com");
+        co3.setTelephone("0612345678");
+        co3.setFonction(f3);
+
         c.setContacts(new ArrayList<Contact>());
         c.getContacts().add(co);
         c.getContacts().add(co2);
