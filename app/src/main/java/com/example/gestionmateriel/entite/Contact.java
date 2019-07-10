@@ -2,7 +2,7 @@ package com.example.gestionmateriel.entite;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Personne {
+public class Contact {
 
     @JsonProperty("pers_id")
     private int id;

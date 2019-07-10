@@ -22,7 +22,7 @@ public class Client {
     private Ville ville;
 
     @JsonProperty("contacts")
-    private List<Personne> contacts;
+    private List<Contact> contacts;
 
     public int getNbContact() {
         return this.contacts.size();
@@ -68,11 +68,11 @@ public class Client {
         this.ville = ville;
     }
 
-    public List<Personne> getContacts() {
+    public List<Contact> getContacts() {
         return contacts;
     }
 
-    public void setContacts(List<Personne> contacts) {
+    public void setContacts(List<Contact> contacts) {
         this.contacts = contacts;
     }
 }
