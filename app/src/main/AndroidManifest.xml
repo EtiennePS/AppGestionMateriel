@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".presentation.fichemateriel.FicheMateriel"></activity>
+        <activity android:name=".presentation.ajoutinterface.AjoutInterfaceActivity"></activity>
+        <activity android:name=".presentation.fichemateriel.FicheMaterielActivity" />
         <activity android:name=".presentation.listclient.ListClientActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +32,7 @@
         <activity
             android:name=".presentation.detailclient.DetailClientActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
