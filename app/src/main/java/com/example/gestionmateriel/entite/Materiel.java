@@ -5,6 +5,7 @@ import java.util.List;
 public class Materiel {
     private int id;
     private String libelle;
+    private String numSerie;
     private TypeMateriel type;
     private List<Interface> interfaces;
 
@@ -35,4 +36,12 @@ public class Materiel {
     public List<Interface> getInterfaces() { return interfaces; }
 
     public void setInterfaces(List<Interface> interfaces) { this.interfaces = interfaces; }
+
+    public String getNumSerie() {
+        return numSerie;
+    }
+
+    public void setNumSerie(String numSerie) {
+        this.numSerie = numSerie;
+    }
 }

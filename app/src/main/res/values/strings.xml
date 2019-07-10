@@ -18,6 +18,8 @@
     <string name="mailContact">Mail</string>
     <string name="telContact">Telephone</string>
     <string name="btn_ajout_contact">Ajouter</string>
+    <string name="libell">Libellé</string>
+    <string name="num_ro_de_la_s_rie">Numéro de la série</string>
 
 
 

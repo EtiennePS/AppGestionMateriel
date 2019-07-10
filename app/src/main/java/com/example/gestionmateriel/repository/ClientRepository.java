@@ -76,6 +76,7 @@ public class ClientRepository {
 
         m.setTypeMateriel(tm);
         m.setId(357);
+        m.setNumSerie("654651651981651");
         m.setLibelle("Xiaomi Redmi Note 4");
         m.setInterfaces(new ArrayList<Interface>());
         m.getInterfaces().add(i);
