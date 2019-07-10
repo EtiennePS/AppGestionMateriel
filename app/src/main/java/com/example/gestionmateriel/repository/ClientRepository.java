@@ -32,6 +32,7 @@ public class ClientRepository {
     }
 
     public List<Client> importJSON(String json) throws IOException {
+        json = new String(json.getBytes("ISO-8859-1"), "UTF-8");
         this.clients = new ObjectMapper().readValue(json, new TypeReference<List<Client>>(){});
         return clients;
     }
