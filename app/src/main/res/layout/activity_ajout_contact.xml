@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/nomContactAjout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:autofillHints=".AUTOFILL_HINT_NAME"
+        android:hint="@string/nomContact" />
+
+    <EditText
+        android:id="@+id/prenomContactAjout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:autofillHints=".AUTOFILL_HINT_NAME"
+        android:hint="@string/prenomContact" />
+
+    <EditText
+        android:id="@+id/fonctionContactAjout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"
+        android:hint="@string/fonctionContact" />
+
+    <EditText
+        android:id="@+id/mailContactAjout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"
+        android:hint="@string/mailContact" />
+
+    <EditText
+        android:id="@+id/telContactAjout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:autofillHints=".AUTOFILL_HINT_POSTAL_CODE"
+        android:hint="@string/telContact" />
+
+
+    <Button
+        android:id="@+id/buttonAjoutContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_ajout_contact" />
+
+</LinearLayout>
