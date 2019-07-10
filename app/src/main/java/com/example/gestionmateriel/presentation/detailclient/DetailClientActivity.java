@@ -13,6 +13,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast;
 
 public class DetailClientActivity extends AppCompatActivity {
+    private Client client;
+    public Client getClient() {
+        return client;
+    }
+
+    private void setClient(Client client) {
+        this.client = client;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +34,6 @@ public class DetailClientActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
 
         ClientRepository cr = ClientRepository.getInstance();
-        Client c = cr.getById(getIntent().getIntExtra("idClient", 0));
-        Toast.makeText(DetailClientActivity.this, c.getNom(), Toast.LENGTH_SHORT).show();
+        this.client  = cr.getById(getIntent().getIntExtra("idClient", 0));
     }
 }
