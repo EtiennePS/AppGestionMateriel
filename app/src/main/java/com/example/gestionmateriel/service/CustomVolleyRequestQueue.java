@@ -1,4 +1,4 @@
-package com.example.gestionmateriel.repository;
+package com.example.gestionmateriel.service;
 
 import android.content.Context;
 

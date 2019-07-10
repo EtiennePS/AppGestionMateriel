@@ -81,23 +81,42 @@ public class ClientRepository {
 
 
         // Partie info client
-        Fonction f = new Fonction();
-        Contact co = new Contact();
         Ville v = new Ville();
-
         v.setCodePostale("33000");
         v.setNom("Bordeaux");
 
+        Fonction f = new Fonction();
         f.setLibelle("Xtrem Programmeur");
-
+        Contact co = new Contact();
         co.setNom("LAURIN");
         co.setPrenom("Maxime");
         co.setEmail("17.laurinmaxime@gmail.com");
         co.setTelephone("0613903883");
         co.setFonction(f);
 
+        Fonction f2 = new Fonction();
+        f2.setLibelle("Support");
+        Contact co2 = new Contact();
+        co2.setNom("PICHERIT");
+        co2.setPrenom("Étienne");
+        co2.setEmail("etienne.picherit@gmail.com");
+        co2.setTelephone("0661738790");
+        co2.setFonction(f2);
+
+        Fonction f3 = new Fonction();
+        f3.setLibelle("Designer Expert");
+        Contact co3 = new Contact();
+        co3.setNom("BOUCHET");
+        co3.setPrenom("Kateryna");
+        co3.setEmail("kateryna.bouchet@gmail.com");
+        co3.setTelephone("0613903883");
+        co3.setFonction(f3);
+
         c.setContacts(new ArrayList<Contact>());
         c.getContacts().add(co);
+        c.getContacts().add(co2);
+        c.getContacts().add(co3);
+
         c.setMateriels(new ArrayList<Materiel>());
         c.getMateriels().add(m);
         c.setVille(v);
