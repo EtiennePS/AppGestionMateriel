@@ -15,6 +15,7 @@ import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
 import com.example.gestionmateriel.entite.Materiel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MaterielsClientsFragment extends Fragment {
@@ -58,9 +59,9 @@ public class MaterielsClientsFragment extends Fragment {
     }
 
     private class ListeMaterielAdapter extends RecyclerView.Adapter<MaterielViewHolder> {
-        List<Materiel> listMateriel;
+        private List<Materiel> listMateriel;
         public ListeMaterielAdapter(List<Materiel> list) {
-            this.listMateriel= list;
+            this.listMateriel = (list == null ? new ArrayList<Materiel>() : list);
         }
 
 

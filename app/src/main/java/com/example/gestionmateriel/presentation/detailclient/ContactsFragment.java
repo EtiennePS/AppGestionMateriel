@@ -21,6 +21,7 @@ import com.example.gestionmateriel.repository.ClientRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContactsFragment extends Fragment {
@@ -129,7 +130,7 @@ public class ContactsFragment extends Fragment {
     {
         List<Contact> listContact;
         public ListeContactsAdapter(List<Contact> list) {
-            this.listContact = list;
+            this.listContact  = (list == null ? new ArrayList<Contact>() : list);
         }
 
 
