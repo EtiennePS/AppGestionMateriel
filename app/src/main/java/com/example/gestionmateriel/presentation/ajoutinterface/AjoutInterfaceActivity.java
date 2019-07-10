@@ -12,5 +12,6 @@ public class AjoutInterfaceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajout_interface);
+        setTitle(R.string.title_activity_ajout_interface);
     }
 }
