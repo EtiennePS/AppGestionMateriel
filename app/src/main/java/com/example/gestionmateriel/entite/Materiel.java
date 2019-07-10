@@ -1,10 +1,12 @@
 package com.example.gestionmateriel.entite;
 
+import java.util.List;
+
 public class Materiel {
     private int id;
     private String libelle;
-    private Client idclient;
-    private TypeMateriel idtype;
+    private TypeMateriel type;
+    private List<Interface> interfaces;
 
     public int getId() {
         return id;
@@ -22,22 +24,15 @@ public class Materiel {
         this.libelle = libelle;
     }
 
-    public Client getClient() {
-        return idclient;
-    }
-
-    public void setClient(Client client) {
-        this.idclient = client;
-    }
-
     public TypeMateriel getTypeMateriel() {
-        return idtype;
+        return type;
     }
 
     public void setTypeMateriel(TypeMateriel typeMateriel) {
-        this.idtype = typeMateriel;
+        this.type = typeMateriel;
     }
 
+    public List<Interface> getInterfaces() { return interfaces; }
 
-
+    public void setInterfaces(List<Interface> interfaces) { this.interfaces = interfaces; }
 }

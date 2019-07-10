@@ -67,7 +67,9 @@ public class ListClientActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 ClientRepository cr = ClientRepository.getInstance();
                 try {
-                    updateList(cr.jsonToClients(response));
+                    cr.importJSON(response);
+                    cr.addExempleClient();
+                    updateList(cr.getAll());
                 } catch (IOException e) {
                     e.printStackTrace();
                     Log.e("JSON", e.getStackTrace().toString());

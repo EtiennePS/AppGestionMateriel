@@ -4,8 +4,8 @@ public class Interface {
     private int id;
     private String nom;
     private String mac;
-    private int idType;
-    private int idMateriel;
+    private AdresseIp adresseIp;
+    private TypeInterface typeInterface;
 
     public int getId() {
         return id;
@@ -31,19 +31,11 @@ public class Interface {
         this.mac = mac;
     }
 
-    public int getIdType() {
-        return idType;
-    }
+    public AdresseIp getAdresseIp() { return adresseIp; }
 
-    public void setIdType(int idType) {
-        this.idType = idType;
-    }
+    public void setAdresseIp(AdresseIp adresseIp) { this.adresseIp = adresseIp; }
 
-    public int getIdMateriel() {
-        return idMateriel;
-    }
+    public TypeInterface getTypeInterface() { return typeInterface; }
 
-    public void setIdMateriel(int idMateriel) {
-        this.idMateriel = idMateriel;
-    }
+    public void setTypeInterface(TypeInterface typeInterface) { this.typeInterface = typeInterface; }
 }

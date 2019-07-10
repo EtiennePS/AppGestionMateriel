@@ -24,6 +24,9 @@ public class Client {
     @JsonProperty("contacts")
     private List<Contact> contacts;
 
+    @JsonProperty(value = "materiels", required = false)
+    private List<Materiel> materiels;
+
     public int getNbContact() {
         return this.contacts.size();
     }
@@ -75,4 +78,8 @@ public class Client {
     public void setContacts(List<Contact> contacts) {
         this.contacts = contacts;
     }
+
+    public List<Materiel> getMateriels() { return materiels; }
+
+    public void setMateriels(List<Materiel> materiels) { this.materiels = materiels; }
 }

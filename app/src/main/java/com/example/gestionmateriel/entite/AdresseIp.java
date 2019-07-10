@@ -5,8 +5,7 @@ public class AdresseIp {
     private String ipV4;
     private String ipV6;
     private String masque;
-    private int idiIterface;
-    private int idTypeAffectation;
+    private TypeAffectation typeAffectation;
 
     public int getId() {
         return id;
@@ -40,19 +39,7 @@ public class AdresseIp {
         this.masque = masque;
     }
 
-    public int getIdiIterface() {
-        return idiIterface;
-    }
+    public TypeAffectation getTypeAffectation() { return typeAffectation; }
 
-    public void setIdiIterface(int idiIterface) {
-        this.idiIterface = idiIterface;
-    }
-
-    public int getIdTypeAffectation() {
-        return idTypeAffectation;
-    }
-
-    public void setIdTypeAffectation(int idTypeAffectation) {
-        this.idTypeAffectation = idTypeAffectation;
-    }
+    public void setTypeAffectation(TypeAffectation typeAffectation) { this.typeAffectation = typeAffectation; }
 }

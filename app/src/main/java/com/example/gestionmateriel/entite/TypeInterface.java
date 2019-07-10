@@ -1,6 +1,6 @@
 package com.example.gestionmateriel.entite;
 
-public class TypeIf {
+public class TypeInterface {
     private int id;
     private String libelle;
 
