@@ -2,9 +2,15 @@ package com.example.gestionmateriel.entite;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
+
+    public Client() {
+        this.setMateriels(new ArrayList<Materiel>());
+        this.setContacts(new ArrayList<Contact>());
+    }
 
     @JsonProperty("clt_id")
     private int id;
@@ -29,6 +35,10 @@ public class Client {
 
     public int getNbContact() {
         return this.contacts.size();
+    }
+
+    public int getNbMateriel() {
+        return this.materiels.size();
     }
 
     public int getId() {

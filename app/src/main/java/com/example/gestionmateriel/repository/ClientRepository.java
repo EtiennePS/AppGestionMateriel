@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ClientRepository {
@@ -80,6 +81,7 @@ public class ClientRepository {
         m.setLibelle("Xiaomi Redmi Note 4");
         m.setInterfaces(new ArrayList<Interface>());
         m.getInterfaces().add(i);
+        m.setDateAchat(new Date());
 
 
         // Partie info client
@@ -115,7 +117,7 @@ public class ClientRepository {
         co3.setFonction(f3);
 
         Fonction f4 = new Fonction();
-        f3.setLibelle("Technicien");
+        f4.setLibelle("Technicien");
         Contact co4 = new Contact();
         co4.setNom("Pablo");
         co4.setPrenom("Pablito");

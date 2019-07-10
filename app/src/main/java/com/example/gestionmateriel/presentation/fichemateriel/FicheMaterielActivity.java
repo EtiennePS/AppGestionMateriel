@@ -15,6 +15,7 @@ import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Interface;
 import com.example.gestionmateriel.entite.Materiel;
 import com.example.gestionmateriel.presentation.ajoutinterface.AjoutInterfaceActivity;
+import com.example.gestionmateriel.repository.MaterielRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -29,7 +30,22 @@ public class FicheMaterielActivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_materiel);
-        setTitle(R.string.title_activity_liste_client);
+        setTitle(R.string.title_activity_fiche_materiel);
+
+        MaterielRepository mr = MaterielRepository.getInstance();
+        this.materiel  = mr.getById(getIntent().getIntExtra("idMateriel", 0));
+
+        TextView tvLibelle = (TextView) findViewById(R.id.libelleFicheMateriel);
+        TextView tvNumSerie = (TextView) findViewById(R.id.numSerieFicheMateriel);
+        TextView tvTypeMateriel = (TextView) findViewById(R.id.typeMaterielFicheMateriel);
+        TextView tvDateAchat = (TextView) findViewById(R.id.dateAchatFicheMateriel);
+
+        tvLibelle.setText(materiel.getLibelle());
+        tvNumSerie.setText(materiel.getNumSerie());
+        tvTypeMateriel.setText(materiel.getTypeMateriel().getLibelle());
+        tvDateAchat.setText(materiel.getDateAchat().getDate()+ "/"
+                + (materiel.getDateAchat().getMonth() + 1) + "/"
+                + (materiel.getDateAchat().getYear() + 1900));
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -73,6 +89,8 @@ public class FicheMaterielActivity extends AppCompatActivity {
             tvMasque = (TextView) itemView.findViewById(R.id.masqueListeInterface);
             tvAffectation = (TextView) itemView.findViewById(R.id.affectationListeInterface);
             view = itemView;
+
+
         }
 
         //puis ajouter une fonction pour remplir la cellule en fonction d'un MyObject
