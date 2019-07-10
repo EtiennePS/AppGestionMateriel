@@ -11,6 +11,14 @@
     <string name="adresseClient">Adresse</string>
     <string name="adresse2Client">Adresse2</string>
     <string name="codepostaleClient">Code Postale</string>
-    <string name="villeClient">Ville</string>
+    <string name="villeClient">ville</string>
+    <string name="nomContact">Nom</string>
+    <string name="prenomContact">Prenom</string>
+    <string name="fonctionContact">Fonction occupée</string>
+    <string name="mailContact">Mail</string>
+    <string name="telContact">Telephone</string>
+    <string name="btn_ajout_contact">Ajouter</string>
+
+
 
 </resources>

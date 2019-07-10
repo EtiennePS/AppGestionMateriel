@@ -16,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
 import com.example.gestionmateriel.entite.Contact;
+import com.example.gestionmateriel.presentation.ajoutcontact.AjoutContactActivity;
 import com.example.gestionmateriel.repository.ClientRepository;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -41,11 +44,23 @@ public class ContactsFragment extends Fragment {
            recyclerViewContact.setLayoutManager(new LinearLayoutManager(activity));
            recyclerViewContact.setAdapter( new ListeContactsAdapter(c.getContacts()) {});
 
+           FloatingActionButton ajoutC = root.findViewById(R.id.ajoutContact);
+           ajoutC.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                           .setAction("Action", null).show();
+                   Intent i = new Intent(getActivity(), AjoutContactActivity.class);
+                   startActivity(i);
+               }
+           });
+
 
            return root;
 
 
        }
+
 
 
 

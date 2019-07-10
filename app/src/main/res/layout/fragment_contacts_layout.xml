@@ -14,4 +14,14 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ajoutContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_anchor="@+id/recyclerViewContacts"
+        app:layout_anchorGravity="end|bottom"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_margin="30dp"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
