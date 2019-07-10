@@ -109,22 +109,23 @@ public class ClientRepository {
         co3.setNom("BOUCHET");
         co3.setPrenom("Kateryna");
         co3.setEmail("kateryna.bouchet@gmail.com");
-        co3.setTelephone("0613903883");
+        co3.setTelephone("018569857");
         co3.setFonction(f3);
 
         Fonction f4 = new Fonction();
-        f3.setLibelle("Expert tout court");
+        f3.setLibelle("Technicien");
         Contact co4 = new Contact();
-        co3.setNom("Pablo");
-        co3.setPrenom("Pablito");
-        co3.setEmail("Pablo.pablito@gmail.com");
-        co3.setTelephone("0612345678");
-        co3.setFonction(f3);
+        co4.setNom("Pablo");
+        co4.setPrenom("Pablito");
+        co4.setEmail("Pablo.pablito@gmail.com");
+        co4.setTelephone("0612345678");
+        co4.setFonction(f3);
 
         c.setContacts(new ArrayList<Contact>());
         c.getContacts().add(co);
         c.getContacts().add(co2);
         c.getContacts().add(co3);
+        c.getContacts().add(co4);
 
         c.setMateriels(new ArrayList<Materiel>());
         c.getMateriels().add(m);
