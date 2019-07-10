@@ -25,7 +25,6 @@ public class MaterielRepository {
                 if (m.getId() == id){
                     return m;
                 }
-
             }
         }
 

@@ -30,7 +30,7 @@ public class FicheMaterielActivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_materiel);
-        setTitle(R.string.title_activity_liste_client);
+        setTitle(R.string.title_activity_fiche_materiel);
 
         MaterielRepository mr = MaterielRepository.getInstance();
         this.materiel  = mr.getById(getIntent().getIntExtra("idMateriel", 0));
@@ -43,7 +43,9 @@ public class FicheMaterielActivity extends AppCompatActivity {
         tvLibelle.setText(materiel.getLibelle());
         tvNumSerie.setText(materiel.getNumSerie());
         tvTypeMateriel.setText(materiel.getTypeMateriel().getLibelle());
-        tvDateAchat.setText("TODO"); //TODO
+        tvDateAchat.setText(materiel.getDateAchat().getDate()+ "/"
+                + (materiel.getDateAchat().getMonth() + 1) + "/"
+                + (materiel.getDateAchat().getYear() + 1900));
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

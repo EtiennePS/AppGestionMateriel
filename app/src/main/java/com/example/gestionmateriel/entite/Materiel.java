@@ -1,17 +1,22 @@
 package com.example.gestionmateriel.entite;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Materiel {
     private int id;
     private String libelle;
     private String numSerie;
+    private Date dateAchat;
     private TypeMateriel type;
     private List<Interface> interfaces;
 
-    public int getId() {
-        return id;
+    public Materiel() {
+        this.setInterfaces(new ArrayList<Interface>());
     }
+
+    public int getId() { return id; }
 
     public void setId(int id) {
         this.id = id;
@@ -44,4 +49,8 @@ public class Materiel {
     public void setNumSerie(String numSerie) {
         this.numSerie = numSerie;
     }
+
+    public Date getDateAchat() { return dateAchat; }
+
+    public void setDateAchat(Date dateAchat) { this.dateAchat = dateAchat; }
 }

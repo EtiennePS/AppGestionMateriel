@@ -127,7 +127,7 @@ public class ListClientActivity extends AppCompatActivity {
         public void bind(Client client){
             tvNomClient.setText(client.getNom());
             tvNbContactClient.setText(client.getNbContact() + "");
-            tvNbMaterielClient.setText("0");
+            tvNbMaterielClient.setText(client.getNbMateriel() + "");
             this.client = client;
         }
     }
