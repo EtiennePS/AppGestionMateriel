@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.gestionmateriel.R;
@@ -26,6 +27,9 @@ public class ContactsFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+
+
+
         View root = inflater.inflate(R.layout.fragment_contacts_layout, container, false);
         DetailClientActivity activity = (DetailClientActivity) getActivity();
         Client c = activity.getClient();
@@ -69,7 +73,7 @@ public class ContactsFragment extends Fragment {
         public void bindContact(Contact contact){
             nomContact.setText(contact.getNom());
             prenomContact.setText(contact.getPrenom());
-            fonctionContact.setText(contact.getFonction()+"");
+            fonctionContact.setText(contact.getFonction().getLibelle());
             mailContact.setText(contact.getEmail());
             telContact.setText(contact.getTelephone());
             this.contact = contact;
