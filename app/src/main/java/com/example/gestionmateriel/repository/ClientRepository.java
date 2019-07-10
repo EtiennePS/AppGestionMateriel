@@ -34,7 +34,27 @@ public class ClientRepository {
     public List<Client> importJSON(String json) throws IOException {
         json = new String(json.getBytes("ISO-8859-1"), "UTF-8");
         this.clients = new ObjectMapper().readValue(json, new TypeReference<List<Client>>(){});
+        initList();
         return clients;
+    }
+
+    private void initList() {
+        for(Client c : clients) {
+            if(c.getContacts() == null) {
+                c.setContacts(new ArrayList<Contact>());
+            }
+
+            if(c.getMateriels() == null) {
+                c.setMateriels(new ArrayList<Materiel>());
+            }
+            else {
+                for(Materiel m : c.getMateriels()) {
+                    if(m.getInterfaces() == null) {
+                        m.setInterfaces(new ArrayList<Interface>());
+                    }
+                }
+            }
+        }
     }
 
     public Client getById(int id) {

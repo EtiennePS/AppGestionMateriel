@@ -1,5 +1,6 @@
 package com.example.gestionmateriel.presentation.detailclient;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
 import com.example.gestionmateriel.entite.Materiel;
+import com.example.gestionmateriel.presentation.fichemateriel.FicheMaterielActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +51,14 @@ public class MaterielsClientsFragment extends Fragment {
 
             libelleMat = (TextView) itemView.findViewById(R.id.libellelistemateriel);
             numeroSer = (TextView) itemView.findViewById(R.id.numserielistemateriel);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+                    Intent myIntent = new Intent(getActivity(), FicheMaterielActivity.class);
+                    myIntent.putExtra("idMateriel", materiel.getId());
+                    startActivity(myIntent);
+                }
+            });
         }
 
         public void bindMateriel(Materiel materiel) {
