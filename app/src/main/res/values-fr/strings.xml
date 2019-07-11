@@ -28,6 +28,8 @@
     <string name="num_ro_de_la_s_rie">Numéro de la série</string>
     <string name="menulistclientupdate">Recharger clients</string>
     <string name="menulistclientajouter">Créer un client</string>
+    <string name="menufichematerielajouter">Ajouter interface</string>
+    <string name="menufichematerielmodifier">Modifier matériel</string>
 
 
     <string name="nomMateriel">Nom</string>

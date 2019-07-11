@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Interface;
 import com.example.gestionmateriel.entite.Materiel;
 import com.example.gestionmateriel.presentation.ajoutinterface.AjoutInterfaceActivity;
+import com.example.gestionmateriel.presentation.ajoutmateriel.AjoutMaterielActivity;
 import com.example.gestionmateriel.repository.MaterielRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -50,16 +53,41 @@ public class FicheMaterielActivity extends AppCompatActivity {
         FloatingActionButton fab = findViewById(R.id.fabAjoutInterface);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Intent i = new Intent(FicheMaterielActivity.this, AjoutInterfaceActivity.class);
-                i.putExtra("idMateriel", materiel.getId());
-                startActivity(i);
-            }
+            public void onClick(View view) { ajouterInterface(); }
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_fiche_materiel, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_fiche_materiel_Ajouter:
+                ajouterInterface();
+                return true;
+            case R.id.menu_fiche_materiel_Modifier:
+                modifierMateriel();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void ajouterInterface() {
+        Intent i = new Intent(FicheMaterielActivity.this, AjoutInterfaceActivity.class);
+        i.putExtra("idMateriel", materiel.getId());
+        startActivity(i);
+    }
+
+    private void modifierMateriel() {
+        Intent i = new Intent(FicheMaterielActivity.this, AjoutMaterielActivity.class);
+        i.putExtra("idMateriel", materiel.getId());
+        startActivity(i);
+    }
 
     private class ListeInterfaceViewHolder extends RecyclerView.ViewHolder {
         private TextView tvNomInterface;
@@ -76,7 +104,6 @@ public class FicheMaterielActivity extends AppCompatActivity {
         public ListeInterfaceViewHolder(final View itemView) {
             super(itemView);
 
-
             tvNomInterface = (TextView) itemView.findViewById(R.id.nomInterfaceListeInterface);
             tvTypeInterface = (TextView) itemView.findViewById(R.id.typeInterfaceListeInterface);
             tvMac = (TextView) itemView.findViewById(R.id.macListeInterface);
@@ -85,8 +112,6 @@ public class FicheMaterielActivity extends AppCompatActivity {
             tvMasque = (TextView) itemView.findViewById(R.id.masqueListeInterface);
             tvAffectation = (TextView) itemView.findViewById(R.id.affectationListeInterface);
             view = itemView;
-
-
         }
 
         //puis ajouter une fonction pour remplir la cellule en fonction d'un MyObject

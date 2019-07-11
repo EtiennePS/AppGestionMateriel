@@ -48,7 +48,7 @@ public class ListClientActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menulistclient, menu);
+        getMenuInflater().inflate(R.menu.menu_list_client, menu);
         return true;
     }
 

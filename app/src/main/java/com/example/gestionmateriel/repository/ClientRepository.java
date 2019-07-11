@@ -81,6 +81,8 @@ public class ClientRepository {
         m.setLibelle("Xiaomi Redmi Note 4");
         m.setInterfaces(new ArrayList<Interface>());
         m.getInterfaces().add(i);
+        m.getInterfaces().add(i);
+        m.getInterfaces().add(i);
         m.setDateAchat(new Date());
 
 
@@ -132,6 +134,8 @@ public class ClientRepository {
         c.getContacts().add(co4);
 
         c.setMateriels(new ArrayList<Materiel>());
+        c.getMateriels().add(m);
+        c.getMateriels().add(m);
         c.getMateriels().add(m);
         c.setVille(v);
         c.setNom("Admin Team");
