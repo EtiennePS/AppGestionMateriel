@@ -60,6 +60,6 @@
         android:id="@+id/buttonAjoutContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_ajout_contact" />
+        android:text="@string/btn_ajouter" />
 
 </LinearLayout>

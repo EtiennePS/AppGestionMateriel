@@ -28,46 +28,31 @@ public class ContactsFragment extends Fragment {
     private RecyclerView recyclerViewContact;
 
 
-       @Override
-    public View onCreateView(
-            @NonNull LayoutInflater inflater, ViewGroup container,
+    @Override
+    public View onCreateView( @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-
-
 
         View root = inflater.inflate(R.layout.fragment_contacts_layout, container, false);
         DetailClientActivity activity = (DetailClientActivity) getActivity();
         Client c = activity.getClient();
-        c.getContacts();
-        new ListeContactsAdapter(c.getContacts());
 
-           recyclerViewContact = (RecyclerView) root.findViewById(R.id.recyclerViewContacts);
-           recyclerViewContact.setLayoutManager(new LinearLayoutManager(activity));
-           recyclerViewContact.setAdapter( new ListeContactsAdapter(c.getContacts()) {});
+       recyclerViewContact = (RecyclerView) root.findViewById(R.id.recyclerViewContacts);
+       recyclerViewContact.setLayoutManager(new LinearLayoutManager(activity));
+       recyclerViewContact.setAdapter( new ListeContactsAdapter(c.getContacts()) {});
 
-           FloatingActionButton ajoutC = root.findViewById(R.id.ajoutContact);
-           ajoutC.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                           .setAction("Action", null).show();
-                   Intent i = new Intent(getActivity(), AjoutContactActivity.class);
-                   startActivity(i);
-               }
-           });
+       FloatingActionButton ajoutC = root.findViewById(R.id.ajoutContact);
+       ajoutC.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                       .setAction("Action", null).show();
+               Intent i = new Intent(getActivity(), AjoutContactActivity.class);
+               startActivity(i);
+           }
+       });
 
-
-           return root;
-
-
-       }
-
-
-
-
-
-
-
+       return root;
+   }
 
     private class ContactViewHolder extends RecyclerView.ViewHolder {
         private Contact contact;
@@ -90,8 +75,9 @@ public class ContactsFragment extends Fragment {
             telContact = (TextView) itemView.findViewById(R.id.telContact);
             mailContact = (TextView) itemView.findViewById(R.id.mailContact);
 
-            }
-        public void bindContact(Contact contact){
+        }
+
+        public void bindContact(Contact contact) {
             nomContact.setText(contact.getNom());
             prenomContact.setText(contact.getPrenom());
             fonctionContact.setText(contact.getFonction().getLibelle());
@@ -121,9 +107,6 @@ public class ContactsFragment extends Fragment {
 
 
         }
-
-
-
     }
 
     private  class ListeContactsAdapter extends RecyclerView.Adapter<ContactViewHolder>
@@ -133,23 +116,22 @@ public class ContactsFragment extends Fragment {
             this.listContact  = (list == null ? new ArrayList<Contact>() : list);
         }
 
-
-
         @Override
         public ContactViewHolder onCreateViewHolder(ViewGroup viewGroup, int itemType) {
             View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.liste_contacts_layout,viewGroup,false);
             return new ContactViewHolder(view);
         }
 
+        @Override
         public void onBindViewHolder(ContactViewHolder myViewHolder, int position) {
             Contact contact = listContact.get(position);
             myViewHolder.bindContact(contact);
         }
+
         @Override
         public int getItemCount() {
             return listContact.size();
         }
-
 
     }
 

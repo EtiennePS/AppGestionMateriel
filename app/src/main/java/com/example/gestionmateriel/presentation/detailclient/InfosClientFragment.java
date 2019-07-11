@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +40,14 @@ public class InfosClientFragment extends Fragment {
 
         TextView tvVille = (TextView) root.findViewById(R.id.villeinfoclient);
         tvVille.setText(c.getVille().getNom());
+
+        Button btAjouter = (Button) root.findViewById(R.id.boutonModifClient);
+        btAjouter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Non Implémenté", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return root;
     }
