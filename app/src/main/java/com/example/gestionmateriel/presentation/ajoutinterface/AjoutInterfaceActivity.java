@@ -42,14 +42,14 @@ public class AjoutInterfaceActivity extends AppCompatActivity {
         spinner2 =(Spinner) findViewById(R.id.affectationajoutinterface);
 
         List exempleList = new ArrayList();
-        exempleList.add("Maxime");
-        exempleList.add("Etienne");
-        exempleList.add("Katya");
+        exempleList.add("wlan");
+        exempleList.add("lan");
+        exempleList.add("bluetooth");
+        exempleList.add("wan");
 
         List exempleList2 = new ArrayList();
-        exempleList2.add("Shwazy");
-        exempleList2.add("Hacker");
-        exempleList2.add("Atila");
+        exempleList2.add("DHCP");
+        exempleList2.add("static");
 
         ArrayAdapter adapter = new ArrayAdapter(
                 getApplicationContext(),
