@@ -33,4 +33,14 @@
     <string name="nomMateriel">Nom</string>
     <string name="typeMateriel">Type</string>
     <string name="libelleMateriel">Libellé</string>
+
+    <string name="type_interface">Type interface :</string>
+    <string name="nom_interface">Nom interface :</string>
+    <string name="mac">Mac :</string>
+    <string name="ipv4">Ipv4 :</string>
+    <string name="ipv6">Ipv6 :</string>
+    <string name="masque">Masque :</string>
+    <string name="affectation">Affectation :</string>
+    <string name="type">Type</string>
+    <string name="n_serie">N Serie</string>
 </resources>

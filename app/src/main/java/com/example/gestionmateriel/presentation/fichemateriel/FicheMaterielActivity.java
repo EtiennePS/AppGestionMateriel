@@ -38,14 +38,10 @@ public class FicheMaterielActivity extends AppCompatActivity {
         TextView tvLibelle = (TextView) findViewById(R.id.libelleFicheMateriel);
         TextView tvNumSerie = (TextView) findViewById(R.id.numSerieFicheMateriel);
         TextView tvTypeMateriel = (TextView) findViewById(R.id.typeMaterielFicheMateriel);
-        TextView tvDateAchat = (TextView) findViewById(R.id.dateAchatFicheMateriel);
 
         tvLibelle.setText(materiel.getLibelle());
         tvNumSerie.setText(materiel.getNumSerie());
         tvTypeMateriel.setText(materiel.getTypeMateriel().getLibelle());
-        tvDateAchat.setText(materiel.getDateAchat().getDate()+ "/"
-                + (materiel.getDateAchat().getMonth() + 1) + "/"
-                + (materiel.getDateAchat().getYear() + 1900));
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

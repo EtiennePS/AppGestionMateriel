@@ -17,32 +17,67 @@ android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="724dp"
+        android:orientation="vertical"
+        android:padding="15dp">
 
-        <TextView
-            android:id="@+id/libelleFicheMateriel"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_height="50dp"
+            android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/typeMaterielFicheMateriel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            <TextView
+                android:id="@+id/nomlibelle"
+                android:layout_width="129dp"
+                android:layout_height="match_parent"
+                android:text="@string/libell"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/numSerieFicheMateriel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            <TextView
+                android:id="@+id/libelleFicheMateriel"
+                android:layout_width="249dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/dateAchatFicheMateriel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+        <LinearLayout
+            android:layout_width="382dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/typemateriel"
+                android:layout_width="129dp"
+                android:layout_height="match_parent"
+                android:text="@string/type"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/typeMaterielFicheMateriel"
+                android:layout_width="249dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="382dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/numeroseriemat"
+                android:layout_width="129dp"
+                android:layout_height="match_parent"
+                android:text="@string/n_serie"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numSerieFicheMateriel"
+                android:layout_width="249dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

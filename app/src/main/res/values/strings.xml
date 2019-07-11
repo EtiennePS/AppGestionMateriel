@@ -32,4 +32,14 @@
     <string name="nomMateriel">Name</string>
     <string name="typeMateriel">Type</string>
     <string name="libelleMateriel">Wording</string>
+
+    <string name="type_interface">Interface type :</string>
+    <string name="nom_interface">Interface name :</string>
+    <string name="mac">Mac :</string>
+    <string name="ipv4">Ipv4 :</string>
+    <string name="ipv6">Ipv6 :</string>
+    <string name="masque">Mask :</string>
+    <string name="affectation">Affectation :</string>
+    <string name="type">Type</string>
+    <string name="n_serie">Serial Number</string>
 </resources>
