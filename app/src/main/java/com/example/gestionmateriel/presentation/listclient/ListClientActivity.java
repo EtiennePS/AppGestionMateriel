@@ -23,7 +23,6 @@ import com.example.gestionmateriel.presentation.detailclient.DetailClientActivit
 import com.example.gestionmateriel.repository.ClientRepository;
 import com.example.gestionmateriel.service.RequestMaker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 import java.util.List;

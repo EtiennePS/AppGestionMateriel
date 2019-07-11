@@ -21,7 +21,8 @@
         <activity android:name=".presentation.ajoutinterface.AjoutInterfaceActivity"
             android:parentActivityName=".presentation.fichemateriel.FicheMaterielActivity"/>
         <activity android:name=".presentation.fichemateriel.FicheMaterielActivity"
-            android:parentActivityName=".presentation.fichemateriel.FicheMaterielActivity" android:launchMode="singleTop"/>
+            android:parentActivityName=".presentation.fichemateriel.FicheMaterielActivity"
+            android:launchMode="singleTop"/>
         <activity android:name=".presentation.ajoutcontact.AjoutContactActivity"
             android:parentActivityName=".presentation.ajoutcontact.AjoutContactActivity"/>
         <activity android:name=".presentation.listclient.ListClientActivity">

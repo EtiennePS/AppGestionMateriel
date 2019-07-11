@@ -30,6 +30,6 @@
 
 
     <string name="nomMateriel">Nom</string>
-    <string name="typeMateriel">type</string>
-    <string name="libelleMateriel">Libéllé</string>
+    <string name="typeMateriel">Type</string>
+    <string name="libelleMateriel">Libellé</string>
 </resources>
