@@ -13,7 +13,7 @@ public class AjoutContactActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        getFragmentManager().popBackStack();
         super.onCreate(savedInstanceState);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_ajout_contact);

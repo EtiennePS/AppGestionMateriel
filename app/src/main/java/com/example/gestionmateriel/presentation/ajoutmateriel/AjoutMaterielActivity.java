@@ -17,7 +17,9 @@ import com.example.gestionmateriel.R;
 public class AjoutMaterielActivity extends AppCompatActivity {
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajout_materiel);
         setTitle(R.string.title_activity_ajout_materiel);

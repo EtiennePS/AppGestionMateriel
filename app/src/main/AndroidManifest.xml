@@ -15,13 +15,13 @@
         <activity
             android:name=".presentation.ajoutmateriel.AjoutMaterielActivity"
             android:label="@string/title_activity_ajout_materiel"
-            android:parentActivityName=".presentation.detailclient.DetailClientActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".presentation.fichemateriel.FicheMaterielActivity"
+
             ></activity>
         <activity android:name=".presentation.ajoutinterface.AjoutInterfaceActivity"
             android:parentActivityName=".presentation.fichemateriel.FicheMaterielActivity"/>
         <activity android:name=".presentation.fichemateriel.FicheMaterielActivity"
-            android:parentActivityName=".presentation.detailclient.DetailClientActivity"/>
+            android:parentActivityName=".presentation.fichemateriel.FicheMaterielActivity"/>
         <activity android:name=".presentation.ajoutcontact.AjoutContactActivity"
             android:parentActivityName=".presentation.detailclient.DetailClientActivity"/>
         <activity android:name=".presentation.listclient.ListClientActivity">

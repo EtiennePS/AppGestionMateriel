@@ -6,54 +6,36 @@
 
 
     <EditText
-        android:id="@+id/nom"
+        android:id="@+id/libelleMateriel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:autofillHints=".AUTOFILL_HINT_NAME"
-        android:hint="@string/nomClient" />
+        android:ems="10"
+        android:hint="@string/nomMateriel"
+        android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/adresse"
+        android:id="@+id/numSerieMateriel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:ems="10"
-        android:inputType="textPostalAddress"
         android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"
-        android:hint="@string/adresseClient" />
+        android:ems="10"
+        android:hint="@string/typeMateriel"
+        android:inputType="textPostalAddress" />
 
     <EditText
-        android:id="@+id/adresse2"
+        android:id="@+id/typeMateriel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:ems="10"
-        android:inputType="textPostalAddress"
         android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"
-        android:hint="@string/adresse2Client" />
-
-    <EditText
-        android:id="@+id/codepost"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:autofillHints=".AUTOFILL_HINT_POSTAL_CODE"
-        android:hint="@string/codepostaleClient" />
+        android:hint="@string/libelleMateriel"
+        android:inputType="textPostalAddress" />
 
-    <EditText
-        android:id="@+id/ville"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:autofillHints=".AUTOFILL_HINT_VILLE"
-        android:hint="@string/villeClient" />
+
 
     <Button
         android:id="@+id/boutonAjouterMateriel"

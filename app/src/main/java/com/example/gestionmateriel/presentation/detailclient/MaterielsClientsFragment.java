@@ -15,7 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
 import com.example.gestionmateriel.entite.Materiel;
+import com.example.gestionmateriel.presentation.ajoutmateriel.AjoutMaterielActivity;
 import com.example.gestionmateriel.presentation.fichemateriel.FicheMaterielActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +37,18 @@ public class MaterielsClientsFragment extends Fragment {
         recyclerViewMateriel = (RecyclerView) root.findViewById(R.id.recyclerViewMateriel);
         recyclerViewMateriel.setLayoutManager(new LinearLayoutManager(activity));
         recyclerViewMateriel.setAdapter(new ListeMaterielAdapter(c.getMateriels()) {});
+
+
+        FloatingActionButton ajoutM = root.findViewById(R.id.btnAjoutMateriel);
+        ajoutM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                Intent i = new Intent(getActivity(), AjoutMaterielActivity.class);
+                startActivity(i);
+            }
+        });
         return root;
     }
 
