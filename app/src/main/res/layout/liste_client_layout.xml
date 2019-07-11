@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    android:screenOrientation="portrait"
 
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="2dp"
@@ -16,73 +17,85 @@
              - cardCornerRadius pour arrondir les angles
          -->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-                <!-- Les CardView agissent comme des FrameLayout,
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                        <!-- Les CardView agissent comme des FrameLayout,
                  pour avoir une organisation verticale nous devons
                  donc rajouter un LinearLayout -->
 
 
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="40dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="50"
-                    app:srcCompat="@drawable/ic_malette" />
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="64dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="50"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_malette" />
 
-                <TextView
-                    android:id="@+id/nom"
-                    android:layout_width="163dp"
-                    android:layout_height="80dp"
-                    android:background="?android:selectableItemBackground"
-                    android:fontFamily="sans-serif"
-                    android:padding="20dp"
-                    android:textAlignment="textStart"
-                    android:textColor="#333"
-                    android:textSize="18sp"
-                    tools:text="MaxCorporation" />
+                        <TextView
+                            android:id="@+id/nom"
+                            android:layout_width="109dp"
+                            android:layout_height="80dp"
+                            android:background="?android:selectableItemBackground"
+                            android:fontFamily="sans-serif"
+                            android:padding="5dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333"
+                            android:textSize="18sp"
+                            tools:text="MaxCorporation" />
 
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="35dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="5"
-                    app:srcCompat="@drawable/ic_groupe" />
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="35dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="5"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_groupe" />
 
-                <TextView
-                    android:id="@+id/nbMateriel"
-                    android:layout_width="56dp"
-                    android:layout_height="80dp"
-                    android:background="?android:selectableItemBackground"
-                    android:fontFamily="sans-serif"
-                    android:padding="20dp"
-                    android:textAlignment="textStart"
-                    android:textColor="#333"
-                    android:textSize="18sp"
-                    tools:text="1" />
+                        <TextView
+                            android:id="@+id/nbMateriel"
+                            android:layout_width="56dp"
+                            android:layout_height="80dp"
+                            android:background="?android:selectableItemBackground"
+                            android:fontFamily="sans-serif"
+                            android:padding="20dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333"
+                            android:textSize="18sp"
+                            tools:text="1" />
 
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="50dp"
-                    android:layout_height="65dp"
-                    android:layout_weight="50"
-                    app:srcCompat="@drawable/ic_routeur" />
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="50dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="50"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_routeur" />
 
-                <TextView
-                    android:id="@+id/nbContact"
-                    android:layout_width="75dp"
-                    android:layout_height="80dp"
-                    android:background="?android:selectableItemBackground"
-                    android:fontFamily="sans-serif"
-                    android:padding="20dp"
-                    android:textAlignment="textStart"
-                    android:textColor="#333"
-                    android:textSize="18sp"
-                    tools:text="5" />
+                        <TextView
+                            android:id="@+id/nbContact"
+                            android:layout_width="75dp"
+                            android:layout_height="80dp"
+                            android:background="?android:selectableItemBackground"
+                            android:fontFamily="sans-serif"
+                            android:padding="20dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333"
+                            android:textSize="18sp"
+                            tools:text="5" />
 
-        </LinearLayout>
+                </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
