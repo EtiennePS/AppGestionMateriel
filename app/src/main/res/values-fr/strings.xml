@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GestionMateriel</string>
+    <string name="title_activity_liste_client">Liste Clients</string>
+    <string name="title_activity_fiche_materiel">Fiche Matériel</string>
+    <string name="title_activity_ajout_client">Ajout Client</string>
+    <string name="title_activity_ajout_contact">Ajout Contact</string>
+    <string name="title_activity_ajout_materiel">Ajout Matériel</string>
+    <string name="title_activity_ajout_interface">Ajout Interface</string>
+    <string name="modifier">Modifier</string>
+
+    <string name="tab_text_1">Infos</string>
+    <string name="tab_text_2">Contacts</string>
+    <string name="tab_text_3">Matériels</string>
+    <string name="btn_ajout_client">Ajouter</string>
+    <string name="nomClient">Nom</string>
+    <string name="adresseClient">Adresse</string>
+    <string name="adresse2Client">Adresse2</string>
+    <string name="codepostaleClient">Code Postale</string>
+    <string name="villeClient">ville</string>
+    <string name="nomContact">Nom</string>
+    <string name="prenomContact">Prenom</string>
+    <string name="fonctionContact">Fonction occupée</string>
+    <string name="mailContact">Mail</string>
+    <string name="telContact">Telephone</string>
+    <string name="btn_ajouter">Ajouter</string>
+    <string name="libell">Libellé</string>
+    <string name="num_ro_de_la_s_rie">Numéro de la série</string>
+    <string name="menulistclientupdate">Recharger clients</string>
+    <string name="menulistclientajouter">Créer un client</string>
+
+
+    <string name="nomMateriel">Nom</string>
+    <string name="typeMateriel">Type</string>
+    <string name="libelleMateriel">Libellé</string>
+</resources>

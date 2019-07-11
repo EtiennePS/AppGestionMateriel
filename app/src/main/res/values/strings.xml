@@ -1,35 +1,35 @@
 <resources>
-    <string name="app_name">GestionMateriel</string>
-    <string name="title_activity_liste_client">Liste Clients</string>
-    <string name="title_activity_fiche_materiel">Fiche Matériel</string>
-    <string name="title_activity_ajout_client">Ajout Client</string>
-    <string name="title_activity_ajout_contact">Ajout Contact</string>
-    <string name="title_activity_ajout_materiel">Ajout Matériel</string>
-    <string name="title_activity_ajout_interface">Ajout Interface</string>
-    <string name="modifier">Modifier</string>
+    <string name="app_name">HardwareManagement</string>
+    <string name="title_activity_liste_client">Client List</string>
+    <string name="title_activity_fiche_materiel">Hardware sheet</string>
+    <string name="title_activity_ajout_client">Client Add</string>
+    <string name="title_activity_ajout_contact">Contact add</string>
+    <string name="title_activity_ajout_materiel">Hardware Add</string>
+    <string name="title_activity_ajout_interface">Interface Add</string>
+    <string name="modifier">Edit</string>
 
-    <string name="tab_text_1">Infos</string>
+    <string name="tab_text_1">Information</string>
     <string name="tab_text_2">Contacts</string>
-    <string name="tab_text_3">Matériels</string>
-    <string name="btn_ajout_client">Ajouter</string>
-    <string name="nomClient">Nom</string>
-    <string name="adresseClient">Adresse</string>
-    <string name="adresse2Client">Adresse2</string>
-    <string name="codepostaleClient">Code Postale</string>
-    <string name="villeClient">ville</string>
-    <string name="nomContact">Nom</string>
-    <string name="prenomContact">Prenom</string>
-    <string name="fonctionContact">Fonction occupée</string>
-    <string name="mailContact">Mail</string>
-    <string name="telContact">Telephone</string>
-    <string name="btn_ajouter">Ajouter</string>
-    <string name="libell">Libellé</string>
-    <string name="num_ro_de_la_s_rie">Numéro de la série</string>
-    <string name="menulistclientupdate">Recharger clients</string>
-    <string name="menulistclientajouter">Créer un client</string>
+    <string name="tab_text_3">Hardwares</string>
+    <string name="btn_ajout_client">Add</string>
+    <string name="nomClient">Name</string>
+    <string name="adresseClient">Adress</string>
+    <string name="adresse2Client">SubAdress</string>
+    <string name="codepostaleClient">Postal Code</string>
+    <string name="villeClient">City</string>
+    <string name="nomContact">Name</string>
+    <string name="prenomContact">First Name</string>
+    <string name="fonctionContact">Position Held</string>
+    <string name="mailContact">eMail</string>
+    <string name="telContact">Phone</string>
+    <string name="btn_ajouter">Add</string>
+    <string name="libell">Wording</string>
+    <string name="num_ro_de_la_s_rie">Serial Number</string>
+    <string name="menulistclientupdate">Client Refresh</string>
+    <string name="menulistclientajouter">Client Create</string>
 
 
-    <string name="nomMateriel">Nom</string>
+    <string name="nomMateriel">Name</string>
     <string name="typeMateriel">Type</string>
-    <string name="libelleMateriel">Libellé</string>
+    <string name="libelleMateriel">Wording</string>
 </resources>

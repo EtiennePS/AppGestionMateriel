@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string name="app_name">GestionTypoMatriz</string>
+        <string name="title_activity_liste_client">Lista Clientes</string>
+        <string name="title_activity_fiche_materiel">Ficha material</string>
+        <string name="title_activity_ajout_client">Añadir  cliente</string>
+        <string name="title_activity_ajout_contact">Añadir  contacto</string>
+        <string name="title_activity_ajout_materiel">Añadir  material</string>
+        <string name="title_activity_ajout_interface">Añadir  Interfaz</string>
+        <string name="modifier">Modificar</string>
+
+        <string name="tab_text_1">Información</string>
+        <string name="tab_text_2">contactos</string>
+        <string name="tab_text_3">materiels</string>
+        <string name="btn_ajout_client">Añadir </string>
+        <string name="nomClient">Nom</string>
+        <string name="adresseClient">dirección</string>
+        <string name="adresse2Client">dirección2</string>
+        <string name="codepostaleClient"> Código postal</string>
+        <string name="villeClient">ciudad</string>
+        <string name="nomContact">Nombre</string>
+        <string name="prenomContact">Apellido</string>
+        <string name="fonctionContact">función de  posición</string>
+        <string name="mailContact">Mail</string>
+        <string name="telContact">Telephone</string>
+        <string name="btn_ajouter">Añadir </string>
+        <string name="libell">texto</string>
+        <string name="num_ro_de_la_s_rie">número de serie</string>
+        <string name="menulistclientupdate">Actualizar clientes</string>
+        <string name="menulistclientajouter">Créar un cliente</string>
+
+
+        <string name="nomMateriel">Nombre</string>
+        <string name="typeMateriel">Typo</string>
+        <string name="libelleMateriel">texto</string>
+</resources>
