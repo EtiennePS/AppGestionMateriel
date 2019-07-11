@@ -41,7 +41,7 @@ public class InfosClientFragment extends Fragment {
         TextView tvVille = (TextView) root.findViewById(R.id.villeinfoclient);
         tvVille.setText(c.getVille().getNom());
 
-        Button btAjouter = (Button) root.findViewById(R.id.boutonModifClient);
+        Button btAjouter = (Button) root.findViewById(R.id.btnModifClient);
         btAjouter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
