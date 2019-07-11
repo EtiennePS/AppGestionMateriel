@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -37,18 +39,37 @@ public class ListClientActivity extends AppCompatActivity {
         setTitle(R.string.title_activity_liste_client);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Intent i = new Intent(ListClientActivity.this, AjoutClientActivity.class);
-                startActivity(i);
-            }
+            public void onClick(View view) { ajouterClient(); }
         });
 
         update();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menulistclient, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menulistclientupdate:
+                update();
+                return true;
+            case R.id.menulistclientajouter:
+                ajouterClient();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void ajouterClient() {
+        Intent i = new Intent(ListClientActivity.this, AjoutClientActivity.class);
+        startActivity(i);
     }
 
     /**

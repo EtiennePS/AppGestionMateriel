@@ -25,4 +25,6 @@
     <string name="btn_ajouter">Ajouter</string>
     <string name="libell">Libellé</string>
     <string name="num_ro_de_la_s_rie">Numéro de la série</string>
+    <string name="menulistclientupdate">Recharger clients</string>
+    <string name="menulistclientajouter">Créer un client</string>
 </resources>
