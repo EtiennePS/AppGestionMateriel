@@ -5,6 +5,7 @@
     <string name="title_activity_ajout_client">Ajout Client</string>
     <string name="title_activity_ajout_materiel">Ajout Matériel</string>
     <string name="title_activity_ajout_interface">Ajout Interface</string>
+    <string name="modifier">Modifier</string>
 
     <string name="tab_text_1">Infos</string>
     <string name="tab_text_2">Contacts</string>
