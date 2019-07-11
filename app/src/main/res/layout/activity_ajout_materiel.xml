@@ -56,9 +56,9 @@
         android:hint="@string/villeClient" />
 
     <Button
-        android:id="@+id/boutonAjouterClient"
+        android:id="@+id/boutonAjouterMateriel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_ajout_client" />
+        android:text="@string/btn_ajouter" />
 
 </LinearLayout>

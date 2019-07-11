@@ -3,6 +3,7 @@
     <string name="title_activity_liste_client">Liste Clients</string>
     <string name="title_activity_fiche_materiel">Fiche Matériel</string>
     <string name="title_activity_ajout_client">Ajout Client</string>
+    <string name="title_activity_ajout_contact">Ajout Contact</string>
     <string name="title_activity_ajout_materiel">Ajout Matériel</string>
     <string name="title_activity_ajout_interface">Ajout Interface</string>
     <string name="modifier">Modifier</string>
@@ -21,10 +22,7 @@
     <string name="fonctionContact">Fonction occupée</string>
     <string name="mailContact">Mail</string>
     <string name="telContact">Telephone</string>
-    <string name="btn_ajout_contact">Ajouter</string>
+    <string name="btn_ajouter">Ajouter</string>
     <string name="libell">Libellé</string>
     <string name="num_ro_de_la_s_rie">Numéro de la série</string>
-
-
-
 </resources>

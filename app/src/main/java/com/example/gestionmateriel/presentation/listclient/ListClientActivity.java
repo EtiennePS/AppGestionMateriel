@@ -51,12 +51,6 @@ public class ListClientActivity extends AppCompatActivity {
         update();
     }
 
-    public void run() {
-        Intent mainIntent = new Intent(this, ListClientActivity.class);
-        startActivity(mainIntent);
-        finish();
-    }
-
     /**
      * Enclenche la mise à jour des données de la liste
      */
