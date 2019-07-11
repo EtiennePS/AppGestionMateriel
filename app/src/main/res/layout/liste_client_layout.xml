@@ -64,7 +64,7 @@
                             app:srcCompat="@drawable/ic_groupe" />
 
                         <TextView
-                            android:id="@+id/nbMateriel"
+                            android:id="@+id/nbContact"
                             android:layout_width="56dp"
                             android:layout_height="80dp"
                             android:background="?android:selectableItemBackground"
@@ -84,7 +84,7 @@
                             app:srcCompat="@drawable/ic_routeur" />
 
                         <TextView
-                            android:id="@+id/nbContact"
+                            android:id="@+id/nbMateriel"
                             android:layout_width="75dp"
                             android:layout_height="80dp"
                             android:background="?android:selectableItemBackground"

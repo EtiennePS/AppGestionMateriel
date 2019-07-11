@@ -3,6 +3,7 @@ package com.example.gestionmateriel.presentation.ajoutcontact;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.gestionmateriel.R;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,9 @@ public class AjoutContactActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_ajout_contact);
         setTitle(R.string.title_activity_ajout_contact);
 
