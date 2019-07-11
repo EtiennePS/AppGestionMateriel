@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,9 +21,11 @@ import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
 import com.example.gestionmateriel.presentation.ajoutclient.AjoutClientActivity;
 import com.example.gestionmateriel.presentation.detailclient.DetailClientActivity;
+import com.example.gestionmateriel.presentation.fichemateriel.FicheMaterielActivity;
 import com.example.gestionmateriel.repository.ClientRepository;
 import com.example.gestionmateriel.service.RequestMaker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 
 import java.io.IOException;
 import java.util.List;
@@ -60,6 +63,9 @@ public class ListClientActivity extends AppCompatActivity {
                 return true;
             case R.id.menulistclientajouter:
                 ajouterClient();
+                return true;
+            case R.id.menulistclientscanner:
+                scanner();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -107,6 +113,32 @@ public class ListClientActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new ListeClientsAdapter(clients) {});
+
+        if(getIntent().getDataString() != null)
+            goToFicheMateriel();
+    }
+
+    private void goToFicheMateriel() {
+        try {
+            String data = getIntent().getDataString().replace("GestionMateriel://","");
+            int idMateriel = Integer.parseInt(data);
+
+            Log.d("ID", idMateriel + "");
+
+            // On retire les données de l'intent pour éviter de revenir sur la fiche matériel par accident
+            getIntent().setData(null);
+
+            Intent i = new Intent(ListClientActivity.this, FicheMaterielActivity.class);
+            i.putExtra("idMateriel", idMateriel);
+            startActivity(i);
+        }
+        catch (NumberFormatException e) {
+            Toast.makeText(ListClientActivity.this, "Id non valide : " + getIntent().getDataString(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void scanner() {
+        Toast.makeText(ListClientActivity.this, "Non implémenté", Toast.LENGTH_SHORT).show();
     }
 
 

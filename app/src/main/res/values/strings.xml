@@ -27,6 +27,7 @@
     <string name="num_ro_de_la_s_rie">Serial Number</string>
     <string name="menulistclientupdate">Client Refresh</string>
     <string name="menulistclientajouter">Client Create</string>
+    <string name="menulistclientscanner">Scan</string>
     <string name="menufichematerielajouter">Add interface</string>
     <string name="menufichematerielmodifier">Edit hardware</string>
 

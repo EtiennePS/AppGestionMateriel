@@ -6,4 +6,7 @@
     <item
         android:id="@+id/menulistclientajouter"
         android:title="@string/menulistclientajouter" />
+    <item
+        android:id="@+id/menulistclientscanner"
+        android:title="@string/menulistclientscanner" />
 </menu>
