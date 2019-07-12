@@ -23,6 +23,7 @@ import com.example.gestionmateriel.presentation.ajoutclient.AjoutClientActivity;
 import com.example.gestionmateriel.presentation.detailclient.DetailClientActivity;
 import com.example.gestionmateriel.presentation.fichemateriel.FicheMaterielActivity;
 import com.example.gestionmateriel.repository.ClientRepository;
+import com.example.gestionmateriel.repository.MaterielRepository;
 import com.example.gestionmateriel.service.RequestMaker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -128,9 +129,16 @@ public class ListClientActivity extends AppCompatActivity {
             // On retire les données de l'intent pour éviter de revenir sur la fiche matériel par accident
             getIntent().setData(null);
 
-            Intent i = new Intent(ListClientActivity.this, FicheMaterielActivity.class);
-            i.putExtra("idMateriel", idMateriel);
-            startActivity(i);
+            if(MaterielRepository.getInstance().getById(idMateriel) != null) {
+                Intent i = new Intent(ListClientActivity.this, FicheMaterielActivity.class);
+                i.putExtra("idMateriel", idMateriel);
+                startActivity(i);
+            }
+            else {
+                Toast.makeText(ListClientActivity.this, "Id non existant : " + idMateriel, Toast.LENGTH_SHORT).show();
+            }
+
+
         }
         catch (NumberFormatException e) {
             Toast.makeText(ListClientActivity.this, "Id non valide : " + getIntent().getDataString(), Toast.LENGTH_SHORT).show();
