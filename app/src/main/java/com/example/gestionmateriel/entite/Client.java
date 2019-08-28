@@ -12,25 +12,12 @@ public class Client {
         this.setContacts(new ArrayList<Contact>());
     }
 
-    @JsonProperty("clt_id")
     private int id;
-
-    @JsonProperty("clt_nom")
     private String nom;
-
-    @JsonProperty("clt_adr1")
     private String adresse1;
-
-    @JsonProperty("clt_adr2")
     private String adresse2;
-
-    @JsonProperty("ville")
     private Ville ville;
-
-    @JsonProperty("contacts")
     private List<Contact> contacts;
-
-    @JsonProperty(value = "materiels", required = false)
     private List<Materiel> materiels;
 
     public int getNbContact() {

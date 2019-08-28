@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.gestionmateriel.R;
 import com.example.gestionmateriel.entite.Client;
-import com.example.gestionmateriel.repository.ClientRepository;
 
 public class InfosClientFragment extends Fragment {
 
@@ -27,21 +26,21 @@ public class InfosClientFragment extends Fragment {
         Client c = activity.getClient();
 
         TextView tvNom = (TextView) root.findViewById(R.id.societeinfoclient);
-        tvNom.setText(c.getNom());
-
         TextView tvAdresse = (TextView) root.findViewById(R.id.adresseinfoclient);
-        tvAdresse.setText(c.getAdresse1());
-
         TextView tvAdresse2 = (TextView) root.findViewById(R.id.adresse2infoclient);
+        TextView tvCodePostal = (TextView) root.findViewById(R.id.codepostinfoclient);
+        TextView tvVille = (TextView) root.findViewById(R.id.villeinfoclient);
+        Button btAjouter = (Button) root.findViewById(R.id.btnModifClient);
+
+        tvNom.setText(c.getNom());
+        tvAdresse.setText(c.getAdresse1());
         tvAdresse2.setText(c.getAdresse2());
 
-        TextView tvCodePostal = (TextView) root.findViewById(R.id.codepostinfoclient);
-        tvCodePostal.setText(c.getVille().getCodePostale());
+        if(c.getVille() != null) {
+            tvCodePostal.setText(c.getVille().getCodePostal());
+            tvVille.setText(c.getVille().getNom());
+        }
 
-        TextView tvVille = (TextView) root.findViewById(R.id.villeinfoclient);
-        tvVille.setText(c.getVille().getNom());
-
-        Button btAjouter = (Button) root.findViewById(R.id.btnModifClient);
         btAjouter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

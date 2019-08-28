@@ -78,11 +78,11 @@ public class ContactsFragment extends Fragment {
         }
 
         public void bindContact(Contact contact) {
-            nomContact.setText(contact.getNom());
-            prenomContact.setText(contact.getPrenom());
+            nomContact.setText(contact.getPersonne().getNom());
+            prenomContact.setText(contact.getPersonne().getPrenom());
             fonctionContact.setText(contact.getFonction().getLibelle());
-            mailContact.setText(contact.getEmail());
-            telContact.setText(contact.getTelephone());
+            mailContact.setText(contact.getPersonne().getEmail());
+            telContact.setText(contact.getPersonne().getTelephone());
             this.contact = contact;
 
 

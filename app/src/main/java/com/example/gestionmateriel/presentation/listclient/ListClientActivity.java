@@ -89,11 +89,10 @@ public class ListClientActivity extends AppCompatActivity {
                 ClientRepository cr = ClientRepository.getInstance();
                 try {
                     cr.importJSON(response);
-                    cr.addExempleClient();
                     updateList(cr.getAll());
                 } catch (IOException e) {
                     e.printStackTrace();
-                    Log.e("JSON", e.getStackTrace().toString());
+                    Log.e("JSON", e.getMessage());
                     Toast.makeText(ListClientActivity.this, "Erreur : " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
@@ -102,6 +101,7 @@ public class ListClientActivity extends AppCompatActivity {
         Response.ErrorListener rel = new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.e("JSON", error.getMessage());
                 Toast.makeText(ListClientActivity.this, "ERREUR : " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         };

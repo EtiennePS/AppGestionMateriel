@@ -10,7 +10,7 @@ import com.android.volley.toolbox.StringRequest;
 public class RequestMaker {
 
     public void requestCombinedJSON(Context c, Response.Listener<String> r, Response.ErrorListener e) {
-        String url = "http://formation.devatom.net/UDEV2/ProjetFilRouge/JSON/combined/clients_contacts.json";
+        String url = "https://api-gestion-materiel.herokuapp.com/api/v1/clients";
         StringRequest request = new StringRequest(Request.Method.GET, url, r, e);
         addRequest(request, c);
     }
