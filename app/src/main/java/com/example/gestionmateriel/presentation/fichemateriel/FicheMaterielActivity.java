@@ -20,7 +20,6 @@ import com.example.gestionmateriel.presentation.ajoutinterface.AjoutInterfaceAct
 import com.example.gestionmateriel.presentation.ajoutmateriel.AjoutMaterielActivity;
 import com.example.gestionmateriel.repository.MaterielRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -119,8 +118,8 @@ public class FicheMaterielActivity extends AppCompatActivity {
             tvNomInterface.setText(i.getNom());
             tvTypeInterface.setText(i.getTypeInterface().getLibelle());
             tvMac.setText(i.getMac());
-            tvIpv4.setText(i.getAdresseIp().getIpV4());
-            tvIpv6.setText(i.getAdresseIp().getIpV6());
+            tvIpv4.setText(i.getAdresseIp().getIpv4());
+            tvIpv6.setText(i.getAdresseIp().getIpv6());
             tvMasque.setText(i.getAdresseIp().getMasque());
             tvAffectation.setText(i.getAdresseIp().getTypeAffectation().getLibelle());
             this.interf = i;

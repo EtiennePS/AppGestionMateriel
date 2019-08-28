@@ -1,10 +1,16 @@
 package com.example.gestionmateriel.entite;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Interface {
     private int id;
     private String nom;
     private String mac;
+
+    @JsonProperty("adresse")
     private AdresseIp adresseIp;
+
+    @JsonProperty("typeif")
     private TypeInterface typeInterface;
 
     public int getId() {

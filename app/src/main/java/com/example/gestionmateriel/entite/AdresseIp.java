@@ -2,8 +2,8 @@ package com.example.gestionmateriel.entite;
 
 public class AdresseIp {
     private int id;
-    private String ipV4;
-    private String ipV6;
+    private String ipv4;
+    private String ipv6;
     private String masque;
     private TypeAffectation typeAffectation;
 
@@ -15,20 +15,20 @@ public class AdresseIp {
         this.id = id;
     }
 
-    public String getIpV4() {
-        return ipV4;
+    public String getIpv4() {
+        return ipv4;
     }
 
-    public void setIpV4(String ipV4) {
-        this.ipV4 = ipV4;
+    public void setIpv4(String ipv4) {
+        this.ipv4 = ipv4;
     }
 
-    public String getIpV6() {
-        return ipV6;
+    public String getIpv6() {
+        return ipv6;
     }
 
-    public void setIpV6(String ipV6) {
-        this.ipV6 = ipV6;
+    public void setIpv6(String ipv6) {
+        this.ipv6 = ipv6;
     }
 
     public String getMasque() {
