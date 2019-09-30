@@ -121,8 +121,8 @@ public class ListClientActivity extends AppCompatActivity {
 
     private void goToFicheMateriel() {
         try {
-            String data = getIntent().getDataString().replace("GestionMateriel://","");
-            int idMateriel = Integer.parseInt(data);
+            String data = getIntent().getDataString();
+            int idMateriel = Integer.parseInt(data.substring(data.lastIndexOf('/') + 1));
 
             Log.d("ID", idMateriel + "");
 
