@@ -11,6 +11,7 @@ public class Materiel {
     private Date dateAchat;
     private TypeMateriel type;
     private List<Interface> interfaces;
+    private List<Incident> incidents;
 
     public Materiel() {
         this.setInterfaces(new ArrayList<Interface>());
@@ -53,4 +54,8 @@ public class Materiel {
     public Date getDateAchat() { return dateAchat; }
 
     public void setDateAchat(Date dateAchat) { this.dateAchat = dateAchat; }
+
+    public List<Incident> getIncidents() { return incidents; }
+
+    public void setIncidents(List<Incident> incidents) { this.incidents = incidents; }
 }
